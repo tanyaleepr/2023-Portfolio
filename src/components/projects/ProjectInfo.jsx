@@ -1,5 +1,5 @@
-import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
+import { useContext } from 'react';
 
 const ProjectInfo = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
@@ -22,7 +22,7 @@ const ProjectInfo = () => {
 									>
 										<span>{info.title}: </span>
 										<a
-											href="https://stoman.me"
+											href="https://www.tanyalee.dev"
 											className={
 												info.title === 'Website' ||
 												info.title === 'Phone'

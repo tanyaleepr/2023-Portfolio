@@ -1,11 +1,5 @@
 // Import images
-import Image1 from '../images/ui-project-1.jpg';
-import Image2 from '../images/web-project-2.jpg';
-import Image3 from '../images/mobile-project-2.jpg';
-import Image4 from '../images/mobile-project-1.jpg';
-import Image5 from '../images/web-project-1.jpg';
-import Image6 from '../images/ui-project-2.jpg';
-// Import icons
+
 import {
 	FiFacebook,
 	FiInstagram,
@@ -13,6 +7,16 @@ import {
 	FiTwitter,
 	FiYoutube,
 } from 'react-icons/fi';
+
+import Image1 from '../images/ui-project-1.jpg';
+import Image2 from '../images/web-project-2.jpg';
+import Image3 from '../images/mobile-project-2.jpg';
+import Image4 from '../images/mobile-project-1.jpg';
+import Image5 from '../images/web-project-1.jpg';
+import Image6 from '../images/ui-project-2.jpg';
+
+// Import icons
+
 
 export const singleProjectData = {
 	ProjectHeader: {
@@ -106,13 +110,13 @@ export const singleProjectData = {
 				id: 1,
 				name: 'Twitter',
 				icon: <FiTwitter />,
-				url: 'https://twitter.com/realstoman',
+				url: 'https://twitter.com/tanyaleedev',
 			},
 			{
 				id: 2,
 				name: 'Instagram',
 				icon: <FiInstagram />,
-				url: 'https://instagram.com/realstoman',
+				url: 'https://instagram.com/tanyaleedev',
 			},
 			{
 				id: 3,
@@ -130,7 +134,7 @@ export const singleProjectData = {
 				id: 5,
 				name: 'Youtube',
 				icon: <FiYoutube />,
-				url: 'https://www.youtube.com/c/StomanStudio',
+				url: 'https://www.youtube.com/tanyaleedev',
 			},
 		],
 	},
