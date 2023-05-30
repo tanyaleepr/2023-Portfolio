@@ -1,8 +1,8 @@
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { FiArrowDownCircle } from 'react-icons/fi';
-import developerLight from '../../images/developer.svg';
 import developerDark from '../../images/developer-dark.svg';
+import developerLight from '../../images/developer.svg';
 import { motion } from 'framer-motion';
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 const AppBanner = () => {
 	const [activeTheme] = useThemeSwitcher();
@@ -25,7 +25,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
 				>
-					Hi, Iam Stoman
+					Hi, I am Tanya 
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0 }}
@@ -37,7 +37,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					A Full-Stack Developer & Design Enthusiast
+					A Cybersecurity Specialist & Multitalented Professional
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
