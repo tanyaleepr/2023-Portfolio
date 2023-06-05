@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-const ProjectSingle = ({ title, category, image }) => {
+const ProjectSingle = ({ title, category, image, tools }) => {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -27,6 +27,10 @@ const ProjectSingle = ({ title, category, image }) => {
 						</p>
 						<span className="text-lg text-ternary-dark dark:text-ternary-light">
 							{category}
+						</span>
+						<br></br>
+						<span className="text-lg text-ternary-dark dark:text-ternary-light">
+							{tools}
 						</span>
 					</div>
 				</div>

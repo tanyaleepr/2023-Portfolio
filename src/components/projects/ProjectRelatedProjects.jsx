@@ -1,5 +1,5 @@
-import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
+import { useContext } from 'react';
 
 const ProjectRelatedProjects = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
@@ -18,6 +18,7 @@ const ProjectRelatedProjects = () => {
 							className="rounded-xl cursor-pointer"
 							alt={project.title}
 							key={project.id}
+							tools={project.tools}
 						/>
 					);
 				})}

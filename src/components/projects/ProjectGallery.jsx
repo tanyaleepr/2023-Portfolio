@@ -1,5 +1,7 @@
-import { useContext } from 'react';
+/* eslint-disable react/jsx-no-duplicate-props */
+
 import SingleProjectContext from '../../context/SingleProjectContext';
+import { useContext } from 'react';
 
 const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
@@ -14,6 +16,7 @@ const ProjectGallery = () => {
 							className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
 							alt={project.title}
 							key={project.id}
+							tools={project.tools}
 						/>
 					</div>
 				);

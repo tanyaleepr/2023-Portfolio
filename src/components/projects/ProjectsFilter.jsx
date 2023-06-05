@@ -1,8 +1,16 @@
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
+	'Cybersecurity',
+	'Frontend',
+	'Backend',
+	'Fullstack',
 	'Branding',
+	'Digital Marketing',
+	'Research Papers',
+	'Mobile Apps',
+	'Cloud Projects',
+	'Data Science',
+	'IT Projects',
+	
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {
