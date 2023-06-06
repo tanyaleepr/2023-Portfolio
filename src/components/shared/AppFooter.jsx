@@ -1,6 +1,7 @@
 import {
 	FiGithub,
 	FiLinkedin,
+	FiMail,
 	FiTwitter,
 } from 'react-icons/fi';
 
@@ -21,6 +22,11 @@ const socialLinks = [
 		id: 3,
 		icon: <FiLinkedin />,
 		url: 'https://www.linkedin.com/in/tanyagonzalez',
+	},
+	{
+		id: 4,
+		icon: <FiMail />,
+		url: 'mailto:tanyaleedev@gmail.com',
 	},
 	
 ];

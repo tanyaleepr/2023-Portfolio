@@ -79,7 +79,7 @@ export const projectsData = [
 		id: 9,
 		title: 'Password Generator for Security',
 		category: 'Cybersecurity',
-		tools: 'HTML, CSS, JavaScript, password security',
+		tools: 'HTML, CSS, JavaScript, Password Security',
 		img: PasswordImage,
 		url:'https://github.com/tanyaleepr/password-for-security',
 	},

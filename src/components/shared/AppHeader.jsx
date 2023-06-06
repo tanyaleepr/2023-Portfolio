@@ -1,7 +1,5 @@
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 
-import Button from '../reusable/Button';
-import HireMeModal from '../HireMeModal';
 import { Link } from 'react-router-dom';
 import logoDark from '../../images/tanya-logo.png';
 import logoLight from '../../images/tanya-logo.png';
@@ -11,7 +9,6 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
-	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
 
 	function toggleMenu() {
@@ -22,20 +19,6 @@ const AppHeader = () => {
 		}
 	}
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
-	}
-
 	return (
 		<motion.nav
 			initial={{ opacity: 0 }}
@@ -43,7 +26,7 @@ const AppHeader = () => {
 			id="nav"
 			className="sm:container sm:mx-auto"
 		>
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
@@ -122,22 +105,7 @@ const AppHeader = () => {
 					>
 						About Me
 					</Link>
-					<Link
-						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-						aria-label="Contact"
-					>
-						Contact
-					</Link>
-					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-						<span
-							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
-							aria-label="Hire Me Button"
-						>
-							<Button title="Hire Me" />
-						</span>
-					</div>
+					
 				</div>
 
 				{/* Header links large screen */}
@@ -156,26 +124,10 @@ const AppHeader = () => {
 					>
 						About Me
 					</Link>
-					<Link
-						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Contact"
-					>
-						Contact
-					</Link>
 				</div>
 
 				{/* Header right section buttons */}
 				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-					<div className="hidden md:flex">
-						<span
-							onClick={showHireMeModal}
-							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-							aria-label="Hire Me Button"
-						>
-							<Button title="Hire Me" />
-						</span>
-					</div>
 
 					{/* Theme switcher large screen */}
 					<div
@@ -190,16 +142,6 @@ const AppHeader = () => {
 						)}
 					</div>
 				</div>
-			</div>
-			{/* Hire me modal */}
-			<div>
-				{showModal ? (
-					<HireMeModal
-						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
-					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
 			</div>
 		</motion.nav>
 	);
