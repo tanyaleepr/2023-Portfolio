@@ -13,6 +13,7 @@
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -22,6 +23,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-SERVICE_ID = service_6deza38
-TEMPLATE_ID = template_5vzru8h
-PKEY= MeRUa4GRNK5eQc_kb
+
