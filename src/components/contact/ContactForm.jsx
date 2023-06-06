@@ -1,14 +1,26 @@
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-const ContactForm = () => {
-	return (
+const EmailContactForm = () => {
+	const form = useRef();
+ 
+	const sendEmail = (e) => {
+		e.preventDefault(); // prevents the page from reloading when you hit “Send”
+ 
+		emailjs.sendForm('SERVICE_ID', 'EMPLATE_ID', form.current, 'PKEY')
+			.then((result) => {
+					// show the user a success message
+			}, (error) => {
+					// show the user an error
+			});
+	};
+	
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
-				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+			<form ref={form} onSubmit={sendEmail}
+			
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
@@ -22,6 +34,7 @@ const ContactForm = () => {
 						inputName="name"
 						placeholderText="Your Name"
 						ariaLabelName="Name"
+						name="user_name"
 					/>
 					<FormInput
 						inputLabel="Email"
@@ -31,15 +44,7 @@ const ContactForm = () => {
 						inputName="email"
 						placeholderText="Your email"
 						ariaLabelName="Email"
-					/>
-					<FormInput
-						inputLabel="Subject"
-						labelFor="subject"
-						inputType="text"
-						inputId="subject"
-						inputName="subject"
-						placeholderText="Subject"
-						ariaLabelName="Subject"
+						name="user_email"
 					/>
 
 					<div className="mt-6">
@@ -63,13 +68,12 @@ const ContactForm = () => {
 						<Button
 							title="Send Message"
 							type="submit"
+							value="Send"
 							aria-label="Send Message"
 						/>
 					</div>
 				</form>
 			</div>
 		</div>
-	);
-};
-
-export default ContactForm;
+}
+export default EmailContactForm;

@@ -17,6 +17,7 @@ export const projectsData = [
 		category: 'Frontend',
 		tools: 'React',
 		img: OhSnapImage,
+		url: 'http://github.com/tanyaleepr/photo-port',
 	},
 	{
 		id: 2,
@@ -24,6 +25,7 @@ export const projectsData = [
 		category: 'Frontend',
 		tools: 'HTML, CSS, JavaScript, and Bootstrap',
 		img: SuperFanImage,
+		url: 'https://github.com/tanyaleepr/super-fan',
 	},
 	{
 		id: 3,
@@ -31,6 +33,7 @@ export const projectsData = [
 		category: 'Frontend',
 		tools: 'HTML and CSS',
 		img: HoriseonImage,
+		url: 'https://github.com/tanyaleepr/horiseon-website',
 	},
 	{
 		id: 4,
@@ -38,6 +41,7 @@ export const projectsData = [
 		category: 'Frontend',
 		tools: 'HTML and CSS',
 		img: RunBuddyImage,
+		url:'https://github.com/tanyaleepr/run-buddy-website',
 	},
 	{
 		id: 5,
@@ -45,6 +49,7 @@ export const projectsData = [
 		category: 'Frontend',
 		tools: 'HTML, CSS, and JavaScript',
 		img: GetItDoneImage,
+		url: 'https://github.com/tanyaleepr/git-it-done',
 	},
 	{
 		id: 6,
@@ -52,6 +57,7 @@ export const projectsData = [
 		category: 'Frontend',
 		tools: 'HTML, CSS, and JavaScript',
 		img: WeatherDashImage,
+		url: 'https://github.com/tanyaleepr/weather-dashboard',
 	},
 	{
 		id: 7,
@@ -59,6 +65,7 @@ export const projectsData = [
 		category: 'Frontend',
 		tools: 'HTML, CSS, and JavaScript',
 		img: MeanGirlsImage,
+		url: 'https://github.com/tanyaleepr/burn-book',
 	},
 	{
 		id: 8,
@@ -66,6 +73,7 @@ export const projectsData = [
 		category: 'Data Science',
 		tools: 'Python, SQL, Data Modeling',
 		img: StockMarketImage,
+		url:'https://github.com/tanyaleepr/Daily-News-Headline-for-Stock-Market-Prediction',
 	},
 	{
 		id: 9,
@@ -73,5 +81,6 @@ export const projectsData = [
 		category: 'Cybersecurity',
 		tools: 'HTML, CSS, JavaScript, password security',
 		img: PasswordImage,
+		url:'https://github.com/tanyaleepr/password-for-security',
 	},
 ];

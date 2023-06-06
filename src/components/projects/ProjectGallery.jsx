@@ -17,6 +17,7 @@ const ProjectGallery = () => {
 							alt={project.title}
 							key={project.id}
 							tools={project.tools}
+							url={project.url}
 						/>
 					</div>
 				);
